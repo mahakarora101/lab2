@@ -30,6 +30,20 @@ class Fgift extends StatefulWidget {
 class _Fgiftstate extends State<Fgift> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: AppBar(title: const Text("Fuel Cost Sharing")));
+    return Scaffold(
+      appBar: AppBar(title: const Text("Fuel Cost Sharing")),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Container(
+            padding: const EdgeInsets.all(18),
+            decoration: BoxDecoration(
+              color: Theme.of(context).colorScheme.inversePrimary,
+              borderRadius: BorderRadius.circular(10),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
