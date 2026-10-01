@@ -76,6 +76,27 @@ class _Fgiftstate extends State<Fgift> {
                     keyboardType: TextInputType.number,
                     onChanged: (String value) {},
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Split', style: theme.textTheme.titleMedium),
+                      Row(
+                        children: [
+                          IconButton(
+                            color: theme.colorScheme.primary,
+                            onPressed: () => {},
+                            icon: const Icon(Icons.remove),
+                          ),
+                          Text("3", style: theme.textTheme.titleMedium),
+                          IconButton(
+                            color: theme.colorScheme.primary,
+                            onPressed: () => {},
+                            icon: const Icon(Icons.add),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
