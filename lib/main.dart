@@ -30,6 +30,11 @@ class Fgift extends StatefulWidget {
 class _Fgiftstate extends State<Fgift> {
   @override
   Widget build(BuildContext context) {
+    var theme = Theme.of(context);
+    final style = theme.textTheme.titleMedium!.copyWith(
+      color: theme.colorScheme.onPrimary,
+      fontWeight: FontWeight.bold,
+    );
     return Scaffold(
       appBar: AppBar(title: const Text("Fuel Cost Sharing")),
       body: Column(
@@ -40,6 +45,18 @@ class _Fgiftstate extends State<Fgift> {
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.inversePrimary,
               borderRadius: BorderRadius.circular(10),
+            ),
+            child: Column(
+              children: [
+                Text('Total Fuel Cost Per Traveller', style: style),
+                Text(
+                  '£0.00',
+                  style: style.copyWith(
+                    color: theme.colorScheme.onPrimary,
+                    fontSize: theme.textTheme.displaySmall?.fontSize,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
