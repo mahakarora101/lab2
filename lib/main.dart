@@ -66,6 +66,18 @@ class _Fgiftstate extends State<Fgift> {
                 borderRadius: BorderRadius.circular(5),
                 border: Border.all(color: theme.colorScheme.primary, width: 2),
               ),
+              child: Column(
+                children: [
+                  TextField(
+                    decoration: const InputDecoration(
+                      border: OutlineInputBorder(),
+                      labelText: 'Enter Fuel Cost',
+                    ),
+                    keyboardType: TextInputType.number,
+                    onChanged: (String value) {},
+                  ),
+                ],
+              ),
             ),
           ),
         ],
