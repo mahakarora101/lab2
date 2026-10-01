@@ -59,6 +59,15 @@ class _Fgiftstate extends State<Fgift> {
               ],
             ),
           ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(5),
+                border: Border.all(color: theme.colorScheme.primary, width: 2),
+              ),
+            ),
+          ),
         ],
       ),
     );
