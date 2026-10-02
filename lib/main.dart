@@ -104,6 +104,7 @@ class _Fgiftstate extends State<Fgift> {
                       Text('20', style: theme.textTheme.titleMedium),
                     ],
                   ),
+                  Text('50%'),
                 ],
               ),
             ),
