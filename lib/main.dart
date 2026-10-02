@@ -28,6 +28,8 @@ class Fgift extends StatefulWidget {
 }
 
 class _Fgiftstate extends State<Fgift> {
+  ValueChanged<double>? get onChanged => null;
+
   @override
   Widget build(BuildContext context) {
     var theme = Theme.of(context);
@@ -105,6 +107,7 @@ class _Fgiftstate extends State<Fgift> {
                     ],
                   ),
                   Text('50%'),
+                  Slider(value: 0.0, onChanged: onChanged),
                 ],
               ),
             ),
