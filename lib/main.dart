@@ -97,6 +97,13 @@ class _Fgiftstate extends State<Fgift> {
                       ),
                     ],
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text('Tip', style: theme.textTheme.titleMedium),
+                      Text('20', style: theme.textTheme.titleMedium),
+                    ],
+                  ),
                 ],
               ),
             ),
