@@ -99,24 +99,7 @@ class _Fgiftstate extends State<Fgift> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Split', style: theme.textTheme.titleMedium),
-                      Row(
-                        children: [
-                          IconButton(
-                            color: theme.colorScheme.primary,
-                            onPressed: decrement,
-                            icon: const Icon(Icons.remove),
-                          ),
-                          Text(
-                            "$_personCount",
-                            style: theme.textTheme.titleMedium,
-                            ),
-                          IconButton(
-                            color: theme.colorScheme.primary,
-                            onPressed: increment,
-                            icon: const Icon(Icons.add),
-                          ),
-                        ],
-                      ),
+                      TravellerCounter(theme: theme, personCount: _personCount),
                     ],
                   ),
                   Row(
@@ -134,6 +117,39 @@ class _Fgiftstate extends State<Fgift> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class TravellerCounter extends StatelessWidget {
+  const new({
+    super.key,
+    required this.theme,
+    required this._personCount,
+  });
+
+  final ThemeData theme;
+  final int _personCount;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        IconButton(
+          color: theme.colorScheme.primary,
+          onPressed: ()=>{},
+          icon: const Icon(Icons.remove),
+        ),
+        Text(
+          "$_personCount",
+          style: theme.textTheme.titleMedium,
+          ),
+        IconButton(
+          color: theme.colorScheme.primary,
+          onPressed: ()=>{},
+          icon: const Icon(Icons.add),
+        ),
+      ],
     );
   }
 }
