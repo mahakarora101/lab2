@@ -29,6 +29,23 @@ class Fgift extends StatefulWidget {
 
 class _Fgiftstate extends State<Fgift> {
   ValueChanged<double>? get onChanged => null;
+  int _personCount =1;
+
+  //Methods
+
+  void increment(){
+    setState(() {
+      _personCount=_personCount+1;
+    });
+  }
+
+  void decrement(){
+    setState(() {
+      if (_personCount>0){
+        _personCount=_personCount-1;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -86,13 +103,16 @@ class _Fgiftstate extends State<Fgift> {
                         children: [
                           IconButton(
                             color: theme.colorScheme.primary,
-                            onPressed: () => {},
+                            onPressed: decrement,
                             icon: const Icon(Icons.remove),
                           ),
-                          Text("3", style: theme.textTheme.titleMedium),
+                          Text(
+                            "$_personCount",
+                            style: theme.textTheme.titleMedium,
+                            ),
                           IconButton(
                             color: theme.colorScheme.primary,
-                            onPressed: () => {},
+                            onPressed: increment,
                             icon: const Icon(Icons.add),
                           ),
                         ],
