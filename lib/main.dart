@@ -32,7 +32,7 @@ class _Fgiftstate extends State<Fgift> {
   ValueChanged<double>? get onChanged => null;
   int _personCount =1;
   double _giftPercentage = 0.0 ;
-  
+
 
   //Methods
 
@@ -138,5 +138,5 @@ class _Fgiftstate extends State<Fgift> {
   }
 }
 
-
+// All changes made and app works as expected
 
