@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Fgift',
       theme: ThemeData(
-        colorScheme: .fromSeed(seedColor: Colors.brown),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.brown),
       ),
       home: const Fgift(),
     );
@@ -25,27 +25,26 @@ class Fgift extends StatefulWidget {
   const Fgift({super.key});
 
   @override
-  State<Fgift> createState() => _Fgiftstate();
+  State<Fgift> createState() => _FgiftState();
 }
 
-class _Fgiftstate extends State<Fgift> {
+class _FgiftState extends State<Fgift> {
   ValueChanged<double>? get onChanged => null;
-  int _personCount =1;
+  int _personCount = 1;
   double _giftPercentage = 0.0 ;
-  
 
   //Methods
 
-  void increment(){
+  void increment() {
     setState(() {
-      _personCount=_personCount+1;
+      _personCount = _personCount + 1;
     });
   }
 
-  void decrement(){
+  void decrement() {
     setState(() {
-      if (_personCount>0){
-        _personCount=_personCount-1;
+      if (_personCount > 0) {
+        _personCount = _personCount - 1;
       }
     });
   }
@@ -102,8 +101,11 @@ class _Fgiftstate extends State<Fgift> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text('Split', style: theme.textTheme.titleMedium),
-                      TravellerCounter(theme: theme, personCount: _personCount,
-                      onDecrement: decrement, onIncrement: increment,                      
+                      TravellerCounter(
+                        theme: theme,
+                        personCount: _personCount,
+                        onDecrement: decrement,
+                        onIncrement: increment,
                       ),
                     ],
                   ),
@@ -126,7 +128,7 @@ class _Fgiftstate extends State<Fgift> {
                     min: 0,
                     max: 0.5,
                     divisions: 5,
-                    label: '${(_giftPercentage * 100).round()}%'
+                    label: '${(_giftPercentage * 100).round()}%',
                   ),
                 ],
               ),
@@ -137,6 +139,3 @@ class _Fgiftstate extends State<Fgift> {
     );
   }
 }
-
-
-
